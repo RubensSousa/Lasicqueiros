@@ -15,22 +15,20 @@ class HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
   }
-    double zoomVal=5.0;
+  double zoomVal = 15.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(FontAwesomeIcons.arrowLeft),
-            onPressed: () {
-              //
-            }),
-        title: Text("New York"),
+
+        title: Text("Guia do Santuário de Canindé (CE)"),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
-              icon: Icon(FontAwesomeIcons.search),
+              icon: Icon(Icons.refresh),
               onPressed: () {
-                //
+                _gotoLocation(-4.358, -39.3137);
               }),
         ],
       ),
@@ -45,20 +43,23 @@ class HomePageState extends State<HomePage> {
     );
   }
 
+  /*FUNCAO PARA DIMINUIR O ZOOM DA TELA
+ * sugestão: EXECUTAR A FUNCAO ENQUANTO O BUTTON ESTIVER PRESSIONADO;*/
  Widget _zoomminusfunction() {
-
     return Align(
       alignment: Alignment.topLeft,
       child: IconButton(
             icon: Icon(FontAwesomeIcons.searchMinus,color:Color(0xff6200ee)),
             onPressed: () {
               zoomVal--;
-             _minus( zoomVal);
+             _minus(zoomVal);
             }),
     );
  }
- Widget _zoomplusfunction() {
-   
+
+ /*FUNCAO PARA AUMENTAR O ZOOM DA TELA
+ * sugestão: EXECUTAR A FUNCAO ENQUANTO O BUTTON ESTIVER PRESSIONADO;*/
+ Widget _zoomplusfunction()  {
     return Align(
       alignment: Alignment.topRight,
       child: IconButton(
@@ -72,11 +73,11 @@ class HomePageState extends State<HomePage> {
 
  Future<void> _minus(double zoomVal) async {
     final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: LatLng(40.712776, -74.005974), zoom: zoomVal)));
+    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: LatLng(-4.358, -39.3137), zoom: zoomVal)));
   }
-  Future<void> _plus(double zoomVal) async {
+ Future<void> _plus(double zoomVal) async {
     final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: LatLng(40.712776, -74.005974), zoom: zoomVal)));
+    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: LatLng(-4.358, -39.3137), zoom: zoomVal)));
   }
 
   
@@ -93,22 +94,43 @@ class HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: _boxes(
-                  "https://lh5.googleusercontent.com/p/AF1QipO3VPL9m-b355xWeg4MXmOQTauFAEkavSluTtJU=w225-h160-k-no",
-                  40.738380, -73.988426,"Gramercy Tavern"),
+                  "https://ia801409.us.archive.org/24/items/basilica_de_caninde/Bas%C3%ADlica_de_S.Francisco-73.jpg",
+                  -4.359281, -39.311843,"Basílica de São Francisco\ndas Chagas"),
             ),
             SizedBox(width: 10.0),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: _boxes(
-                  "https://lh5.googleusercontent.com/p/AF1QipMKRN-1zTYMUVPrH-CcKzfTo6Nai7wdL7D8PMkt=w340-h160-k-no",
-                  40.761421, -73.981667,"Le Bernardin"),
+                  "https://ia601503.us.archive.org/6/items/estatua_caninde/21993136.jpg",
+                  -4.367470, -39.305115,"Estátua de São Francisco\ndas Chagas"),
             ),
             SizedBox(width: 10.0),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: _boxes(
-                  "https://images.unsplash.com/photo-1504940892017-d23b9053d5d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-                  40.732128, -73.999619,"Blue Hill"),
+                  "https://ia601507.us.archive.org/35/items/das_dores/dores.jpg",
+                  -4.359086, -39.314841,"Igreja de Nossa Senhora\ndas Dores"),
+            ),
+            SizedBox(width: 10.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _boxes(
+                  "https://ia801408.us.archive.org/21/items/mosteiro_201907/mosteiro.jpg",
+                  -4.352859, -39.313711,"Mosteiro das Irmãs Clarissas"),
+            ),
+            SizedBox(width: 10.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _boxes(
+                  "https://ia601408.us.archive.org/8/items/zoo_caninde/7600171_x720.jpg",
+                  -4.362529, -39.315197,"Zoológico São Francisco"),
+            ),
+            SizedBox(width: 10.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _boxes(
+                  "https://ia601503.us.archive.org/17/items/convento_caninde/pb-convento1.jpg",
+                  -4.361924, -39.314156,"Convento Santo Antônio"),
             ),
           ],
         ),
@@ -116,7 +138,7 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _boxes(String _image, double lat,double long,String restaurantName) {
+  Widget _boxes(String _image, double lat,double long,String titulo) {
     return  GestureDetector(
         onTap: () {
           _gotoLocation(lat,long);
@@ -124,7 +146,7 @@ class HomePageState extends State<HomePage> {
         child:Container(
               child: new FittedBox(
                 child: Material(
-                    color: Colors.white,
+                    color: Colors.white70,
                     elevation: 14.0,
                     borderRadius: BorderRadius.circular(24.0),
                     shadowColor: Color(0x802196F3),
@@ -144,7 +166,7 @@ class HomePageState extends State<HomePage> {
                           Container(
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: myDetailsContainer1(restaurantName),
+                            child: myDetailsContainer1(titulo),
                           ),
                         ),
 
@@ -155,14 +177,14 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  Widget myDetailsContainer1(String restaurantName) {
+  Widget myDetailsContainer1(String titulo) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
           child: Container(
-              child: Text(restaurantName,
+              child: Text(titulo,
             style: TextStyle(
                 color: Color(0xff6200ee),
                 fontSize: 24.0,
@@ -176,7 +198,7 @@ class HomePageState extends State<HomePage> {
             children: <Widget>[
               Container(
                   child: Text(
-                "4.1",
+                "4.8",
                 style: TextStyle(
                   color: Colors.black54,
                   fontSize: 18.0,
@@ -212,14 +234,14 @@ class HomePageState extends State<HomePage> {
               ),
               Container(
                 child: Icon(
-                  FontAwesomeIcons.solidStarHalf,
+                  FontAwesomeIcons.solidStar,
                   color: Colors.amber,
                   size: 15.0,
                 ),
               ),
                Container(
                   child: Text(
-                "(946)",
+                "(773)",
                 style: TextStyle(
                   color: Colors.black54,
                   fontSize: 18.0,
@@ -230,7 +252,7 @@ class HomePageState extends State<HomePage> {
           SizedBox(height:5.0),
         Container(
                   child: Text(
-                "American \u00B7 \u0024\u0024 \u00B7 1.6 mi",
+                "Telefone: (85) 3343-9950",
                 style: TextStyle(
                   color: Colors.black54,
                   fontSize: 18.0,
@@ -239,7 +261,7 @@ class HomePageState extends State<HomePage> {
               SizedBox(height:5.0),
         Container(
             child: Text(
-          "Closed \u00B7 Opens 17:00 Thu",
+          "Praça da Basílica, 31 \u00B7 Centro",
           style: TextStyle(
               color: Colors.black54,
               fontSize: 18.0,
@@ -255,73 +277,72 @@ class HomePageState extends State<HomePage> {
       width: MediaQuery.of(context).size.width,
       child: GoogleMap(
         mapType: MapType.normal,
-        initialCameraPosition:  CameraPosition(target: LatLng(40.712776, -74.005974), zoom: 12),
+        initialCameraPosition:  CameraPosition(target: LatLng(-4.358, -39.3137), zoom: 15),
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
-        markers: {
-          newyork1Marker,newyork2Marker,newyork3Marker,gramercyMarker,bernardinMarker,blueMarker
-        },
+        markers: {mosteiroMarker, zoologicoMarker, conventoMarker, basilicaMaker, estatuaMarker, doresMarker},
       ),
     );
   }
 
+  /*
+   *
+   */
   Future<void> _gotoLocation(double lat,double long) async {
     final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: LatLng(lat, long), zoom: 15,tilt: 50.0,
+    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(target: LatLng(lat, long), zoom: 20, tilt: 50.0,
       bearing: 45.0,)));
   }
 }
 
-Marker gramercyMarker = Marker(
-  markerId: MarkerId('gramercy'),
-  position: LatLng(40.738380, -73.988426),
-  infoWindow: InfoWindow(title: 'Gramercy Tavern'),
-  icon: BitmapDescriptor.defaultMarkerWithHue(
-    BitmapDescriptor.hueViolet,
-  ),
-);
 
-Marker bernardinMarker = Marker(
-  markerId: MarkerId('bernardin'),
-  position: LatLng(40.761421, -73.981667),
-  infoWindow: InfoWindow(title: 'Le Bernardin'),
+/*OS MARCADORES DE LOCALIZAÇÃO QUE APONTA PARA OS PONTOS TURÍSTICOS NO MAPA*/
+Marker basilicaMaker = Marker(
+  markerId: MarkerId('basilica'),
+  position: LatLng(-4.359281, -39.311843),
+  infoWindow: InfoWindow(title: 'Basílica de São Francisco das Chagas'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
-    BitmapDescriptor.hueViolet,
+    BitmapDescriptor.hueGreen,
   ),
 );
-Marker blueMarker = Marker(
-  markerId: MarkerId('bluehill'),
-  position: LatLng(40.732128, -73.999619),
-  infoWindow: InfoWindow(title: 'Blue Hill'),
+Marker estatuaMarker = Marker(
+  markerId: MarkerId('estatua'),
+  position: LatLng(-4.367470, -39.305115),
+  infoWindow: InfoWindow(title: 'Estátua de São Francisco das Chagas'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
-    BitmapDescriptor.hueViolet,
+    BitmapDescriptor.hueGreen,
   ),
 );
-
-//New York Marker
-
-Marker newyork1Marker = Marker(
-  markerId: MarkerId('newyork1'),
-  position: LatLng(40.742451, -74.005959),
-  infoWindow: InfoWindow(title: 'Los Tacos'),
+Marker doresMarker = Marker(
+  markerId: MarkerId('dores'),
+  position: LatLng(-4.359086, -39.314841),
+  infoWindow: InfoWindow(title: 'Igreja de Nossa Senhora das Dores'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
-    BitmapDescriptor.hueViolet,
+    BitmapDescriptor.hueGreen,
   ),
 );
-Marker newyork2Marker = Marker(
-  markerId: MarkerId('newyork2'),
-  position: LatLng(40.729640, -73.983510),
-  infoWindow: InfoWindow(title: 'Tree Bistro'),
+Marker mosteiroMarker = Marker(
+  markerId: MarkerId('mosteiro'),
+  position: LatLng(-4.352859, -39.313711),
+  infoWindow: InfoWindow(title: 'Mosteiro das Irmãs Clarissas'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
-    BitmapDescriptor.hueViolet,
+    BitmapDescriptor.hueGreen,
   ),
 );
-Marker newyork3Marker = Marker(
-  markerId: MarkerId('newyork3'),
-  position: LatLng(40.719109, -74.000183),
-  infoWindow: InfoWindow(title: 'Le Coucou'),
+Marker zoologicoMarker = Marker(
+  markerId: MarkerId('zoologico'),
+  position: LatLng(-4.362529, -39.315197),
+  infoWindow: InfoWindow(title: 'Zoológico São Francisco'),
   icon: BitmapDescriptor.defaultMarkerWithHue(
-    BitmapDescriptor.hueViolet,
+    BitmapDescriptor.hueGreen,
+  ),
+);
+Marker conventoMarker = Marker(
+  markerId: MarkerId('convento'),
+  position: LatLng(-4.361924, -39.314156),
+  infoWindow: InfoWindow(title: 'Convento Santo Antônio'),
+  icon: BitmapDescriptor.defaultMarkerWithHue(
+    BitmapDescriptor.hueGreen,
   ),
 );
