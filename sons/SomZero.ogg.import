@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SomZero.ogg-c4b86dabb5f49c281bc32cf28aa579f2.oggstr"
+
+[deps]
+
+source_file="res://sons/SomZero.ogg"
+dest_files=[ "res://.import/SomZero.ogg-c4b86dabb5f49c281bc32cf28aa579f2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

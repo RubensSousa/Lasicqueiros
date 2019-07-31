@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/son de fundo da corrida.ogg-74ad5ee5967d19c76656bf6ab7a990cc.oggstr"
+
+[deps]
+
+source_file="res://sons/son de fundo da corrida.ogg"
+dest_files=[ "res://.import/son de fundo da corrida.ogg-74ad5ee5967d19c76656bf6ab7a990cc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

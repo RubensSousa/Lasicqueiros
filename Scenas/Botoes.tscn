@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprits/botaoseta.png" type="Texture" id=1]
+[ext_resource path="res://Sprits/botaoseta2.png" type="Texture" id=2]
+
+[node name="Direcionais" type="Node2D"]
+
+[node name="Cima" type="TouchScreenButton" parent="."]
+position = Vector2( -51, -120 )
+scale = Vector2( 1.2, 1.2 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+action = "Cima"
+
+[node name="Baixo" type="TouchScreenButton" parent="."]
+position = Vector2( 51, 120 )
+rotation = -3.14159
+scale = Vector2( 1.2, 1.2 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+action = "Baixo"

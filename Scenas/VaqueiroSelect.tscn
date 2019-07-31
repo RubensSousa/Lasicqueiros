@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/VaqueiroSelect.gd" type="Script" id=1]
+[ext_resource path="res://Sprits/botoes/tela1.png" type="Texture" id=2]
+[ext_resource path="res://Sprits/puxar1.png" type="Texture" id=3]
+[ext_resource path="res://Sprits/puxar2.png" type="Texture" id=4]
+[ext_resource path="res://Sprits/botoes/fechar.png" type="Texture" id=5]
+[ext_resource path="res://Sprits/botaoretangulo.png" type="Texture" id=6]
+[ext_resource path="res://Sprits/botaoretangulo2.png" type="Texture" id=7]
+[ext_resource path="res://Sprits/botoes/destro.png" type="Texture" id=8]
+[ext_resource path="res://Sprits/botoes/canhoto.png" type="Texture" id=9]
+
+[node name="VaqueiroSelect" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="ColorFrame" type="ColorRect" parent="."]
+margin_left = -17.0
+margin_top = -19.0
+margin_right = 1295.0
+margin_bottom = 739.0
+color = Color( 0, 0, 0, 0.470588 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 521.403, 351.979 )
+scale = Vector2( 0.452604, 0.573897 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Retorna" type="TouchScreenButton" parent="."]
+position = Vector2( 633.477, 433.181 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Retorna"]
+position = Vector2( 39.0001, 40.0001 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="Destro" type="TouchScreenButton" parent="."]
+position = Vector2( 395.383, 263.095 )
+scale = Vector2( 3, 1.34752 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Destro"]
+position = Vector2( 42.2584, 21.1227 )
+scale = Vector2( 0.212957, 0.282643 )
+texture = ExtResource( 8 )
+
+[node name="Canhoto" type="TouchScreenButton" parent="."]
+position = Vector2( 395.383, 349.553 )
+scale = Vector2( 3, 1.34752 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Canhoto"]
+position = Vector2( 42.2584, 21.1227 )
+scale = Vector2( 0.212957, 0.282643 )
+texture = ExtResource( 9 )
+[connection signal="pressed" from="Retorna" to="." method="_on_Retorna_pressed"]
+[connection signal="pressed" from="Destro" to="." method="_on_Destro_pressed"]
+[connection signal="pressed" from="Canhoto" to="." method="_on_Canhoto_pressed"]

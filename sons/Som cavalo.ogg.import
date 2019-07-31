@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Som cavalo.ogg-96ee4ddedccdd5652e95bff867036171.oggstr"
+
+[deps]
+
+source_file="res://sons/Som cavalo.ogg"
+dest_files=[ "res://.import/Som cavalo.ogg-96ee4ddedccdd5652e95bff867036171.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

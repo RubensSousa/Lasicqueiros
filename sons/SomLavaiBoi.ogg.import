@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SomLavaiBoi.ogg-1264176e260ed99643e490abf58db428.oggstr"
+
+[deps]
+
+source_file="res://sons/SomLavaiBoi.ogg"
+dest_files=[ "res://.import/SomLavaiBoi.ogg-1264176e260ed99643e490abf58db428.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

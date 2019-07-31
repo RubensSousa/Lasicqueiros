@@ -1,0 +1,310 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/cenateste.gd" type="Script" id=1]
+[ext_resource path="res://Sprits/botoes/estrela_AC.png" type="Texture" id=2]
+[ext_resource path="res://Sprits/botoes/tela1.png" type="Texture" id=3]
+[ext_resource path="res://Sprits/botoes/scores.png" type="Texture" id=4]
+[ext_resource path="res://Sprits/puxar1.png" type="Texture" id=5]
+[ext_resource path="res://Sprits/puxar2.png" type="Texture" id=6]
+[ext_resource path="res://Sprits/botoes/fechar.png" type="Texture" id=7]
+[ext_resource path="res://fontes/soupofjustice.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://fontes/font.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 9 )
+
+[node name="ranking" type="Node2D"]
+pause_mode = 2
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="ColorFrame" type="ColorRect" parent="."]
+margin_left = -17.0
+margin_top = -19.0
+margin_right = 1295.0
+margin_bottom = 739.0
+color = Color( 0, 0, 0, 0.470588 )
+
+[node name="ColorFrame2 2" type="ColorRect" parent="."]
+margin_left = -17.0
+margin_top = -19.0
+margin_right = 1295.0
+margin_bottom = 739.0
+color = Color( 0, 0, 0, 0.470588 )
+
+[node name="ColorFrame1" type="ColorRect" parent="."]
+margin_left = -17.0
+margin_top = -19.0
+margin_right = 1295.0
+margin_bottom = 739.0
+color = Color( 0, 0, 0, 0.470588 )
+
+[node name="estrela_AC" type="Sprite" parent="."]
+position = Vector2( 399.573, 86.386 )
+scale = Vector2( 0.264241, 0.221531 )
+texture = ExtResource( 2 )
+
+[node name="estrela_AC1" type="Sprite" parent="."]
+position = Vector2( 878.917, 84.715 )
+scale = Vector2( 0.264241, 0.221531 )
+texture = ExtResource( 2 )
+
+[node name="estrela_AC2" type="Sprite" parent="."]
+position = Vector2( 985.809, 83.0452 )
+scale = Vector2( 0.264241, 0.221531 )
+texture = ExtResource( 2 )
+
+[node name="estrela_AC3" type="Sprite" parent="."]
+position = Vector2( 289.34, 86.386 )
+scale = Vector2( 0.264241, 0.221531 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 638.19, 405.222 )
+scale = Vector2( 1.46875, 1.23135 )
+texture = ExtResource( 3 )
+
+[node name="nome scores" type="Sprite" parent="."]
+position = Vector2( 642.22, 84.744 )
+scale = Vector2( 0.451393, 0.451393 )
+texture = ExtResource( 4 )
+
+[node name="Retorna" type="TouchScreenButton" parent="."]
+editor/display_folded = true
+position = Vector2( 1089.75, 608.986 )
+z_index = 1
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Retorna"]
+position = Vector2( 39.0001, 40.0001 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="posicao1" type="Node2D" parent="."]
+
+[node name="01" type="Label" parent="posicao1"]
+margin_left = 205.063
+margin_top = 198.252
+margin_right = 262.063
+margin_bottom = 248.252
+custom_fonts/font = SubResource( 1 )
+text = "01."
+
+[node name="id" type="Label" parent="posicao1"]
+margin_left = 275.0
+margin_top = 203.0
+margin_right = 349.0
+margin_bottom = 239.0
+
+[node name="nome" type="Label" parent="posicao1"]
+margin_left = 364.448
+margin_top = 204.373
+margin_right = 576.448
+margin_bottom = 240.373
+
+[node name="pontuacao" type="Label" parent="posicao1"]
+margin_left = 590.448
+margin_top = 205.746
+margin_right = 802.448
+margin_bottom = 241.746
+
+[node name="data" type="Label" parent="posicao1"]
+margin_left = 831.806
+margin_top = 205.119
+margin_right = 1043.81
+margin_bottom = 241.119
+
+[node name="posicao2" type="Node2D" parent="."]
+position = Vector2( 0, 72 )
+
+[node name="02" type="Label" parent="posicao2"]
+margin_left = 205.063
+margin_top = 192.252
+margin_right = 267.063
+margin_bottom = 242.252
+custom_fonts/font = SubResource( 1 )
+text = "02."
+
+[node name="id" type="Label" parent="posicao2"]
+margin_left = 275.0
+margin_top = 197.0
+margin_right = 349.0
+margin_bottom = 233.0
+
+[node name="nome" type="Label" parent="posicao2"]
+margin_left = 364.448
+margin_top = 198.373
+margin_right = 576.448
+margin_bottom = 234.373
+
+[node name="pontuacao" type="Label" parent="posicao2"]
+margin_left = 590.448
+margin_top = 199.746
+margin_right = 802.448
+margin_bottom = 235.746
+
+[node name="data" type="Label" parent="posicao2"]
+margin_left = 831.806
+margin_top = 199.119
+margin_right = 1043.81
+margin_bottom = 235.119
+
+[node name="posicao3" type="Node2D" parent="."]
+position = Vector2( 0, 140 )
+
+[node name="03" type="Label" parent="posicao3"]
+margin_left = 205.063
+margin_top = 189.252
+margin_right = 267.063
+margin_bottom = 239.252
+custom_fonts/font = SubResource( 1 )
+text = "03."
+
+[node name="id" type="Label" parent="posicao3"]
+margin_left = 275.0
+margin_top = 194.0
+margin_right = 349.0
+margin_bottom = 230.0
+
+[node name="nome" type="Label" parent="posicao3"]
+margin_left = 364.448
+margin_top = 195.373
+margin_right = 576.448
+margin_bottom = 231.373
+
+[node name="pontuacao" type="Label" parent="posicao3"]
+margin_left = 590.448
+margin_top = 196.746
+margin_right = 802.448
+margin_bottom = 232.746
+
+[node name="data" type="Label" parent="posicao3"]
+margin_left = 831.806
+margin_top = 196.119
+margin_right = 1043.81
+margin_bottom = 232.119
+
+[node name="posicao4" type="Node2D" parent="."]
+position = Vector2( 0, 216 )
+
+[node name="04" type="Label" parent="posicao4"]
+margin_left = 205.063
+margin_top = 178.252
+margin_right = 267.063
+margin_bottom = 228.252
+custom_fonts/font = SubResource( 1 )
+text = "04."
+
+[node name="id" type="Label" parent="posicao4"]
+margin_left = 275.0
+margin_top = 183.0
+margin_right = 349.0
+margin_bottom = 219.0
+
+[node name="nome" type="Label" parent="posicao4"]
+margin_left = 364.448
+margin_top = 184.373
+margin_right = 576.448
+margin_bottom = 220.373
+
+[node name="pontuacao" type="Label" parent="posicao4"]
+margin_left = 590.448
+margin_top = 185.746
+margin_right = 802.448
+margin_bottom = 221.746
+
+[node name="data" type="Label" parent="posicao4"]
+margin_left = 831.806
+margin_top = 185.119
+margin_right = 1043.81
+margin_bottom = 221.119
+
+[node name="posicao5" type="Node2D" parent="."]
+position = Vector2( 0, 278 )
+
+[node name="05" type="Label" parent="posicao5"]
+margin_left = 205.063
+margin_top = 185.252
+margin_right = 267.063
+margin_bottom = 235.252
+custom_fonts/font = SubResource( 1 )
+text = "05."
+
+[node name="id" type="Label" parent="posicao5"]
+margin_left = 275.0
+margin_top = 190.0
+margin_right = 349.0
+margin_bottom = 226.0
+
+[node name="nome" type="Label" parent="posicao5"]
+margin_left = 364.448
+margin_top = 191.373
+margin_right = 576.448
+margin_bottom = 227.373
+
+[node name="pontuacao" type="Label" parent="posicao5"]
+margin_left = 590.448
+margin_top = 192.746
+margin_right = 802.448
+margin_bottom = 228.746
+
+[node name="data" type="Label" parent="posicao5"]
+margin_left = 831.806
+margin_top = 192.119
+margin_right = 1043.81
+margin_bottom = 228.119
+
+[node name="posicaoatual" type="Node2D" parent="."]
+position = Vector2( 0, 371 )
+
+[node name="atual" type="Label" parent="posicaoatual"]
+margin_left = 197.0
+margin_top = 184.0
+margin_right = 331.0
+margin_bottom = 234.0
+custom_fonts/font = SubResource( 1 )
+text = "atual:"
+
+[node name="id" type="Label" parent="posicaoatual"]
+margin_left = 340.0
+margin_top = 186.0
+margin_right = 414.0
+margin_bottom = 222.0
+
+[node name="nome" type="Label" parent="posicaoatual"]
+margin_left = 429.448
+margin_top = 187.373
+margin_right = 641.448
+margin_bottom = 223.373
+
+[node name="pontuacao" type="Label" parent="posicaoatual"]
+margin_left = 655.448
+margin_top = 188.746
+margin_right = 867.448
+margin_bottom = 224.746
+
+[node name="data" type="Label" parent="posicaoatual"]
+margin_left = 888.806
+margin_top = 188.119
+margin_right = 1100.81
+margin_bottom = 224.119
+
+[node name="mostrar" type="Button" parent="."]
+margin_left = 87.0
+margin_top = 632.0
+margin_right = 243.0
+margin_bottom = 684.0
+custom_fonts/font = SubResource( 2 )
+text = "MOSTRAR"
+
+[node name="HTTPRequestView" type="HTTPRequest" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[connection signal="pressed" from="Retorna" to="." method="_on_Retorna_pressed"]
+[connection signal="pressed" from="mostrar" to="." method="_on_atualizar_pressed"]
+[connection signal="request_completed" from="HTTPRequestView" to="." method="_on_HTTPRequestView_request_completed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SomDeFundo.ogg-94fbd58d9855d8309eddc8616d74e9ef.oggstr"
+
+[deps]
+
+source_file="res://sons/SomDeFundo.ogg"
+dest_files=[ "res://.import/SomDeFundo.ogg-94fbd58d9855d8309eddc8616d74e9ef.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

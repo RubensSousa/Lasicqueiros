@@ -1,0 +1,347 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/TelaNome_2.gd" type="Script" id=1]
+[ext_resource path="res://Sprits/1257cb9f52a4d10.jpg" type="Texture" id=2]
+[ext_resource path="res://Sprits/botoes/tela1.png" type="Texture" id=3]
+[ext_resource path="res://Sprits/FrasePergunta2.png" type="Texture" id=4]
+[ext_resource path="res://Sprits/FraseNome.png" type="Texture" id=5]
+[ext_resource path="res://Sprits/botaoretangulo.png" type="Texture" id=6]
+[ext_resource path="res://Sprits/botaoretangulo2.png" type="Texture" id=7]
+[ext_resource path="res://Sprits/botoes/seguir.png" type="Texture" id=8]
+[ext_resource path="res://fontes/font20.font" type="BitmapFont" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "NomeAnim"
+tracks/0/type = "value"
+tracks/0/path = NodePath("FrasePergunta:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 210, -420.277 ), Vector2( 210, 111.353 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FrasePergunta:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FraseAtencao:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 210, -303.648 ), Vector2( 210, 227.982 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FraseAtencao:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Painel:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 136.557, -491.49 ), Vector2( 136.557, 40.1403 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Painel:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BtnSeguir/Sprite:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 63.0882, 33.0792 ), Vector2( 63.0882, 33.0792 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BtnSeguir/Sprite:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Nome/VScrollBar:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 696, 3 ), Vector2( 696, 3 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("BtnSeguir:rect_position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 941, -204 ), Vector2( 941, 327 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Nome:rect_position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 351, -330 ), Vector2( 351, 201 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "NomeAnim_2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("BtnSeguir:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 941, 441 ), Vector2( 941, 1056 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Nome/VScrollBar:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 696, 3 ), Vector2( 696, 3 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Nome:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 348, 315 ), Vector2( 348, 930 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BtnSeguir/Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 63.0882, 33.0792 ), Vector2( 63.0882, 33.0792 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BtnSeguir/Sprite:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FrasePergunta:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 210, 224.836 ), Vector2( 210, 839.59 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("FrasePergunta:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Painel:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 136.557, 153.622 ), Vector2( 136.557, 768.377 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Painel:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("FraseAtencao:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 210, 324.465 ), Vector2( 210, 939.219 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("FraseAtencao:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[node name="TelaNome_2" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Fundo" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 2 )
+stretch_mode = 7
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Painel" type="Sprite" parent="."]
+<<<<<<< HEAD
+position = Vector2( 136.557, -491.49 )
+=======
+position = Vector2( 112.59, -511.462 )
+>>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
+scale = Vector2( 1.5, 1 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="FrasePergunta" type="Sprite" parent="."]
+position = Vector2( 210, -420.277 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="FraseAtencao" type="Sprite" parent="."]
+position = Vector2( 210, -303.648 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="BtnSeguir" type="TextureButton" parent="."]
+pause_mode = 2
+margin_left = 941.0
+margin_top = -204.0
+margin_right = 1069.0
+margin_bottom = -139.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="BtnSeguir"]
+position = Vector2( 63.0882, 33.0792 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="AnimNome" type="AnimationPlayer" parent="."]
+pause_mode = 2
+autoplay = "NomeAnim"
+anims/NomeAnim = SubResource( 1 )
+anims/NomeAnim_2 = SubResource( 2 )
+
+[node name="Nome" type="LineEdit" parent="."]
+pause_mode = 2
+margin_left = 351.0
+margin_top = -330.0
+margin_right = 1059.0
+margin_bottom = -298.0
+rect_scale = Vector2( 1, 2 )
+custom_fonts/font = ExtResource( 9 )
+[connection signal="pressed" from="BtnSeguir" to="." method="_on_BtnSeguir_pressed"]

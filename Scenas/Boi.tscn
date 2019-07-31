@@ -1,0 +1,57 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/Boi.gd" type="Script" id=1]
+[ext_resource path="res://Sprits/vacaanim/caido1.png" type="Texture" id=2]
+[ext_resource path="res://Sprits/vacaanim/caido2.png" type="Texture" id=3]
+[ext_resource path="res://Sprits/vacaanim/caido3.png" type="Texture" id=4]
+[ext_resource path="res://Sprits/vacaanim/Vanin2.png" type="Texture" id=5]
+[ext_resource path="res://Sprits/vacaanim/Vanin3.png" type="Texture" id=6]
+[ext_resource path="res://Sprits/vacaanim/Vanin4.png" type="Texture" id=7]
+[ext_resource path="res://Sprits/vacaanim/Vanin5.png" type="Texture" id=8]
+[ext_resource path="res://Sprits/vacaanim/caindo1.png" type="Texture" id=9]
+[ext_resource path="res://Sprits/vacaanim/caindo2.png" type="Texture" id=10]
+[ext_resource path="res://Sprits/vacaanim/caindo3.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "caido",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Andando",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), null ],
+"loop": false,
+"name": "puxando",
+"speed": 9.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 83.94, 11.618 )
+
+[node name="boi" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="boiAnim" type="AnimatedSprite" parent="."]
+z_index = 2
+frames = SubResource( 1 )
+animation = "Andando"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 6.32449, 30.8319 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="."]
+position = Vector2( 6.32449, 30.8319 )
+shape = SubResource( 2 )
