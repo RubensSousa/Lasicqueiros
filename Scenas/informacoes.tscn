@@ -8,11 +8,17 @@
 [ext_resource path="res://fontes/font20.font" type="BitmapFont" id=6]
 
 [node name="cenateste" type="Node2D"]
+
 pause_mode = 2
 z_index = 1
 script = ExtResource( 1 )
 
 [node name="ColorFrame" type="ColorRect" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = -17.0
 margin_top = -19.0
 margin_right = 1295.0
@@ -21,53 +27,59 @@ color = Color( 0, 0, 0, 0.470588 )
 __meta__ = {
 "_edit_lock_": true
 }
+mouse_filter = 0
 
 [node name="Sprite" type="Sprite" parent="."]
-<<<<<<< HEAD
+
 position = Vector2( 638.19, 358.704 )
-=======
-position = Vector2( 667.664, 362.915 )
->>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
 scale = Vector2( 1.46875, 1.52764 )
 texture = ExtResource( 2 )
 
 [node name="Retorna" type="TouchScreenButton" parent="."]
+
 position = Vector2( 1072.75, 622.986 )
 z_index = 1
 normal = ExtResource( 3 )
 pressed = ExtResource( 4 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
 
 [node name="Sprite" type="Sprite" parent="Retorna"]
+
 position = Vector2( 39.0001, 40.0001 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 5 )
 
-<<<<<<< HEAD
-=======
-[node name="TextureButton" type="TextureButton" parent="Retorna"]
-margin_left = 2.10547
-margin_top = 3.15796
-margin_right = 81.1055
-margin_bottom = 81.158
-
->>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
 [node name="tutorial" type="ScrollContainer" parent="."]
+
+rect_scale = Vector2( 1.2, 1.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags_horizontal = 0
+size_flags_vertical = 0
 margin_left = 194.0
 margin_top = 59.0
 margin_right = 968.0
 margin_bottom = 553.0
-rect_scale = Vector2( 1.2, 1.2 )
-mouse_filter = 1
-size_flags_horizontal = 0
-size_flags_vertical = 0
 scroll_horizontal_enabled = false
+scroll_vertical_enabled = true
+mouse_filter = 1
 
 [node name="Label" type="Label" parent="tutorial"]
-margin_right = 732.0
-margin_bottom = 647.0
-mouse_filter = 1
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
 size_flags_horizontal = 0
 size_flags_vertical = 0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 732.0
+margin_bottom = 647.0
 custom_fonts/font = ExtResource( 6 )
 text = "	A vaquejada surgiu entre os séculos XVII e XVIII,
 e teve origem nas festas de apartação das fazendas 
@@ -97,8 +109,9 @@ torno de R$ 50 milhões por ano. (ABVAQ, 2017)
 "
 align = 1
 valign = 3
-[connection signal="pressed" from="Retorna" to="." method="_on_Retorna_pressed"]
-<<<<<<< HEAD
-=======
-[connection signal="pressed" from="Retorna/TextureButton" to="." method="_on_Retorna_pressed"]
->>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+mouse_filter = 1
+
+[connection signal="pressed" from="Retorna" to="." method="_on_Retorna_pressed" binds=[  ]]

@@ -4,26 +4,25 @@
 [ext_resource path="res://Sprits/TrofeuAmador.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
+
 resource_name = "TrofeuAnim"
 length = 3.0
+loop = false
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Trofeu 2:scale")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 1, 1.5, 2.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.5 ), Vector2( 0.2, 0.2 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.5 ), Vector2( 0.2, 0.2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Trofeu 2:position")
 tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 2.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -32,13 +31,23 @@ tracks/1/keys = {
 }
 
 [node name="Trofeu" type="Node2D"]
+
 z_index = 1
 script = ExtResource( 1 )
 
 [node name="Trofeu 2" type="Sprite" parent="."]
+
 position = Vector2( 640, 446 )
-scale = Vector2( 1e-005, 1e-005 )
+scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 2 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
 anims/TrofeuAnim = SubResource( 1 )
+playback_active = true
+playback_speed = 1.0
+blend_times = [  ]
+autoplay = ""

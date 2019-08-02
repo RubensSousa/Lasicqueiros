@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/cavalo.gd" type="Script" id=1]
 [ext_resource path="res://Sprits/personagemAnim/VaqueiroAndando1.png" type="Texture" id=2]
@@ -8,7 +8,13 @@
 [ext_resource path="res://Sprits/personagemAnim/cavaparadoC.png" type="Texture" id=6]
 [ext_resource path="res://Sprits/personagemAnim/cavaparadoF.png" type="Texture" id=7]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 119.084, 18.2278 )
+
+[sub_resource type="SpriteFrames" id=2]
+
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
@@ -26,23 +32,35 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 119.084, 18.2278 )
-
 [node name="Vaqueiro" type="KinematicBody2D"]
+
 scale = Vector2( 2, 2 )
+input_pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Transform2D( 1, 0, 0, 1, 0.54451, 49.5445 )
+shapes/0/trigger = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
 script = ExtResource( 1 )
 
 [node name="Sprite_animado" type="AnimatedSprite" parent="."]
+
 scale = Vector2( 1.6, 1.6 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "Paradofrente"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
 position = Vector2( 0.54451, 49.5445 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="."]
+
 position = Vector2( 0.54451, 49.5445 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0

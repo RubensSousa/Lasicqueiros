@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://Sprits/1257cb9f52a4d10.jpg" type="Texture" id=2]
@@ -29,15 +29,17 @@
 
 [sub_resource type="Theme" id=1]
 
+
 [sub_resource type="Animation" id=2]
+
 resource_name = "LogoAnum"
+length = 1.0
 loop = true
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Logo:scale")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -46,208 +48,364 @@ tracks/0/keys = {
 }
 
 [node name="menu" type="Node2D"]
+
 script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 0.0
+margin_top = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
+mouse_filter = 0
 
 [node name="Fundo" type="TextureRect" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = -19.0
 margin_top = -14.0
 margin_right = 1296.0
 margin_bottom = 745.0
 texture = ExtResource( 2 )
 stretch_mode = 7
+mouse_filter = 1
 
 [node name="Painel" type="ColorRect" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 1 )
 margin_left = 22.0
 margin_top = 195.0
-margin_right = 948.0
+margin_right = 964.0
 margin_bottom = 697.0
-mouse_filter = 1
-theme = SubResource( 1 )
 color = Color( 0.313726, 0.101961, 0.00784314, 1 )
+mouse_filter = 1
 
 [node name="jogar" type="TextureButton" parent="Control"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 1025.0
 margin_top = 550.0
 margin_right = 1195.0
 margin_bottom = 636.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
+params/resize_mode = 0
+texture_scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="Sprite" type="Sprite" parent="Control/jogar"]
+
 position = Vector2( 86.5012, 45.9022 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
 [node name="VaqueiroSelecBTNt" type="TextureButton" parent="Control"]
+
 editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 98.0
 margin_top = 272.0
 margin_right = 395.0
 margin_bottom = 358.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
+params/resize_mode = 1
+texture_scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="vaqueiro2" type="Sprite" parent="Control/VaqueiroSelecBTNt"]
+
 position = Vector2( 149.352, 41.3848 )
 scale = Vector2( 0.300649, 0.278591 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Control/VaqueiroSelecBTNt"]
+
 visible = false
 position = Vector2( 150.108, 44.8944 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 
 [node name="Scores" type="TextureButton" parent="Control"]
-editor/display_folded = true
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 314.0
 margin_top = 414.0
 margin_right = 611.0
 margin_bottom = 500.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
+params/resize_mode = 1
+texture_scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="scores" type="Sprite" parent="Control/Scores"]
+
 position = Vector2( 149.593, 42.4844 )
 scale = Vector2( 0.286177, 0.263883 )
 texture = ExtResource( 8 )
 
 [node name="Nivel" type="TextureButton" parent="Control"]
-editor/display_folded = true
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 538.0
 margin_top = 277.0
 margin_right = 835.0
 margin_bottom = 363.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
+params/resize_mode = 1
+texture_scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="nível" type="Sprite" parent="Control/Nivel"]
+
 position = Vector2( 139.188, 37.8635 )
 scale = Vector2( 0.372647, 0.315909 )
 texture = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="Control/Nivel"]
+
 visible = false
 position = Vector2( 150.972, 36.0997 )
 scale = Vector2( 0.667626, 0.5 )
 texture = ExtResource( 10 )
 
 [node name="Tutorial" type="TextureButton" parent="Control"]
+
 editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 538.0
 margin_top = 548.0
 margin_right = 835.0
 margin_bottom = 634.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
+params/resize_mode = 1
+texture_scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="tutorial2" type="Sprite" parent="Control/Tutorial"]
+
 position = Vector2( 152.285, 44.1723 )
 scale = Vector2( 0.284126, 0.284126 )
 texture = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="Control/Tutorial"]
+
 visible = false
 position = Vector2( 151.366, 42.8944 )
 scale = Vector2( 0.527674, 0.5 )
 texture = ExtResource( 12 )
 
 [node name="Informacoes" type="TextureButton" parent="Control"]
+
 editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 96.0
 margin_top = 547.0
 margin_right = 393.0
 margin_bottom = 633.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
+params/resize_mode = 1
+texture_scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="informações" type="Sprite" parent="Control/Informacoes"]
+
 position = Vector2( 148.849, 42.2098 )
 scale = Vector2( 0.3048, 0.369981 )
 texture = ExtResource( 13 )
 
 [node name="Sprite" type="Sprite" parent="Control/Informacoes"]
+
 visible = false
 position = Vector2( 149.041, 46.8944 )
 scale = Vector2( 0.487729, 0.5 )
 texture = ExtResource( 14 )
 
 [node name="som" type="TextureButton" parent="Control"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 991.0
-margin_top = 45.1011
+margin_top = 41.0
 margin_right = 1091.1
-margin_bottom = 145.201
+margin_bottom = 141.1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 16 )
+params/resize_mode = 0
+texture_scale = Vector2( 1.3, 1.3 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="Sprite" type="Sprite" parent="Control/som"]
-position = Vector2( 36.375, 37.5391 )
+
+position = Vector2( 46.6276, 49.8424 )
 scale = Vector2( 0.268092, 0.260814 )
 texture = ExtResource( 17 )
 
 [node name="Sair" type="TextureButton" parent="Control"]
+
 editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 1152.0
 margin_top = 41.0
 margin_right = 1252.1
 margin_bottom = 141.1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 16 )
+params/resize_mode = 0
+texture_scale = Vector2( 1.3, 1.3 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="Sprite" type="Sprite" parent="Control/Sair"]
+
 position = Vector2( 49.4641, 49.1446 )
 scale = Vector2( 0.329594, 0.312845 )
 texture = ExtResource( 18 )
 
 [node name="Logo" type="Sprite" parent="."]
-position = Vector2( 1113.45, 339.862 )
-scale = Vector2( 0.49, 0.49 )
+
+position = Vector2( 1122.75, 339.862 )
+scale = Vector2( 0.476304, 0.49 )
 texture = ExtResource( 19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "LogoAnum"
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
 anims/LogoAnum = SubResource( 2 )
+playback_active = true
+playback_speed = 1.0
+blend_times = [  ]
+autoplay = "LogoAnum"
 
 [node name="PainelStatus" type="Node2D" parent="."]
+
 z_index = 1
 
 [node name="ColorFrame" type="ColorRect" parent="PainelStatus"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 22.0
 margin_top = 20.0
 margin_right = 948.0
 margin_bottom = 170.0
 color = Color( 0.313726, 0.101961, 0.00784314, 1 )
+mouse_filter = 0
 
 [node name="PainelT" type="ColorRect" parent="PainelStatus"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 825.0
 margin_top = 20.0
-margin_right = 948.0
+margin_right = 964.0
 margin_bottom = 170.0
 color = Color( 0, 0, 0, 1 )
+mouse_filter = 0
 
 [node name="QuantEstrela" type="Sprite" parent="PainelStatus"]
-position = Vector2( 780.297, 61.3241 )
+
+position = Vector2( 781.297, 61.3241 )
 scale = Vector2( 0.176681, 0.179422 )
 texture = ExtResource( 20 )
 
 [node name="Classe" type="Sprite" parent="PainelStatus"]
-position = Vector2( 735.103, 130.008 )
+
+position = Vector2( 736.103, 130.008 )
 scale = Vector2( 0.742622, 0.5 )
 texture = ExtResource( 21 )
 
 [node name="Parque" type="Sprite" parent="PainelStatus"]
-position = Vector2( 289.945, 63.3007 )
+
+position = Vector2( 267.264, 63.3007 )
+scale = Vector2( 0.909277, 1 )
 texture = ExtResource( 22 )
 
 [node name="Vaqueiro" type="Sprite" parent="PainelStatus"]
-position = Vector2( 122.696, 132.868 )
+
+position = Vector2( 117.763, 132.868 )
+scale = Vector2( 0.939101, 1 )
 texture = ExtResource( 23 )
 
 [node name="Trofeu" type="Sprite" parent="PainelStatus"]
+
 position = Vector2( 881.445, 95.4129 )
 scale = Vector2( 0.2, 0.2 )
 __meta__ = {
@@ -255,42 +413,81 @@ __meta__ = {
 }
 
 [node name="NumEstrela" type="Label" parent="PainelStatus"]
-margin_left = 664.0
-margin_top = 32.0
-margin_right = 814.0
-margin_bottom = 205.0
+
 rect_scale = Vector2( 0.4, 0.4 )
-mouse_filter = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags_horizontal = 1
 size_flags_vertical = 0
+margin_left = 668.0
+margin_top = 32.0
+margin_right = 818.0
+margin_bottom = 205.0
 custom_fonts/font = ExtResource( 24 )
 text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+mouse_filter = 1
 
 [node name="NomeVaqueiro" type="Label" parent="PainelStatus"]
-margin_left = 213.0
-margin_top = 119.0
-margin_right = 2248.0
-margin_bottom = 292.0
+
 rect_scale = Vector2( 0.2, 0.2 )
-mouse_filter = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags_horizontal = 1
 size_flags_vertical = 0
+margin_left = 213.0
+margin_top = 116.0
+margin_right = 2248.0
+margin_bottom = 289.0
 custom_fonts/font = ExtResource( 24 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+mouse_filter = 1
 
 [node name="Trofeu" parent="." instance=ExtResource( 25 )]
 
+
 [node name="SomDeFundo" type="AudioStreamPlayer" parent="."]
+
 stream = ExtResource( 26 )
+playing = false
+loop = true
 volume_db = -10.05
 autoplay = true
+paused = false
+loop_offset = 0.0
+buffering_msec = 500
 
 [node name="TextureFrame" type="TextureRect" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 0.0
+margin_top = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
-[connection signal="pressed" from="Control/jogar" to="." method="_on_jogar_pressed"]
-[connection signal="pressed" from="Control/VaqueiroSelecBTNt" to="." method="_on_VaqueiroSelect_pressed"]
-[connection signal="pressed" from="Control/Scores" to="." method="_on_Scores_pressed"]
-[connection signal="pressed" from="Control/Nivel" to="." method="_on_Nivel_pressed"]
-[connection signal="pressed" from="Control/Tutorial" to="." method="_on_Tutorial_pressed"]
-[connection signal="pressed" from="Control/Informacoes" to="." method="_on_Informacoes_pressed"]
-[connection signal="pressed" from="Control/som" to="." method="_on_som_pressed"]
-[connection signal="toggled" from="Control/som" to="." method="_on_som_toggled"]
-[connection signal="pressed" from="Control/Sair" to="." method="_on_Sair_pressed"]
+stretch_mode = 0
+mouse_filter = 1
+
+[connection signal="pressed" from="Control/jogar" to="." method="_on_jogar_pressed" binds=[  ]]
+
+[connection signal="pressed" from="Control/VaqueiroSelecBTNt" to="." method="_on_VaqueiroSelect_pressed" binds=[  ]]
+
+[connection signal="pressed" from="Control/Scores" to="." method="_on_Scores_pressed" binds=[  ]]
+
+[connection signal="pressed" from="Control/Nivel" to="." method="_on_Nivel_pressed" binds=[  ]]
+
+[connection signal="pressed" from="Control/Tutorial" to="." method="_on_Tutorial_pressed" binds=[  ]]
+
+[connection signal="pressed" from="Control/Informacoes" to="." method="_on_Informacoes_pressed" binds=[  ]]
+
+[connection signal="pressed" from="Control/som" to="." method="_on_som_pressed" binds=[  ]]
+
+[connection signal="toggled" from="Control/som" to="." method="_on_som_toggled" binds=[  ]]
+
+[connection signal="pressed" from="Control/Sair" to="." method="_on_Sair_pressed" binds=[  ]]

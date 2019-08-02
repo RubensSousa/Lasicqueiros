@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Scripts/Jogo.gd" type="Script" id=1]
 [ext_resource path="res://Sprits/cerca.png" type="Texture" id=2]
@@ -98,50 +98,30 @@ tracks/4/keys = {
 "values": [ Vector2( 331.762, 421.884 ), Vector2( -2686.27, 421.884 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("BackAnim/faixa11/faixa1:position")
+tracks/5/path = NodePath("BackAnim/DetectarPontos:position")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
 "times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3203.46, 559.52 ), Vector2( 186.098, 558.593 ) ]
+"values": [ Vector2( -6.81641, 0 ), Vector2( -3021.21, 4.54419 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("BackAnim/faixa11/faixa1:position")
+tracks/6/path = NodePath("Limites/linhabret1:position")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
 "times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3435.83, 327.408 ), Vector2( 417.744, 329.961 ) ]
+"values": [ Vector2( 451.748, 368.293 ), Vector2( -2565, 368.293 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("BackAnim/DetectarPontos:position")
+tracks/7/path = NodePath("Limites/linhabret2:position")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
-"times": PoolRealArray( 0, 10 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -6.81641, 0 ), Vector2( -3021.21, 4.54419 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Limites/linhabret1:position")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": PoolRealArray( 0, 10 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 451.748, 368.293 ), Vector2( -2565, 368.293 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Limites/linhabret2:position")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
 "times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -285,99 +265,6 @@ position = Vector2( 1060.2, 358.54 )
 scale = Vector2( 0.999905, 0.927302 )
 texture = ExtResource( 4 )
 
-[node name="faixa21" type="Sprite" parent="BackAnim"]
-
-editor/display_folded = true
-visible = false
-position = Vector2( 3438.35, 294.68 )
-rotation_degrees = 17.9717
-z_index = 1
-z_as_relative = false
-texture = ExtResource( 5 )
-offset = Vector2( 110.253, 211.885 )
-
-[node name="faixa2" type="Area2D" parent="BackAnim/faixa21"]
-
-editor/display_folded = true
-position = Vector2( 106.581, 205.279 )
-rotation_degrees = -27.1108
-scale = Vector2( 0.519197, 7.7774 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="faixa2" type="CollisionShape2D" parent="BackAnim/faixa21/faixa2"]
-
-position = Vector2( 0.635742, -0.551407 )
-rotation_degrees = -5.54495
-scale = Vector2( 3.33224, 3.16005 )
-trigger = false
-_update_shape_index = 0
-
-[node name="faixa2 2" type="Label" parent="BackAnim/faixa21/faixa2"]
-
-rect_rotation = -80.9098
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
-margin_left = 32.1934
-margin_top = -31.7299
-margin_right = 527.193
-margin_bottom = 0.270142
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-mouse_filter = 1
-
-[node name="faixa11" type="Sprite" parent="BackAnim"]
-
-editor/display_folded = true
-visible = false
-position = Vector2( 3175.77, 557.003 )
-rotation_degrees = 17.7031
-scale = Vector2( 0.942007, 1.01186 )
-z_index = 1
-z_as_relative = false
-texture = ExtResource( 5 )
-
-[node name="faixa1" type="Area2D" parent="BackAnim/faixa11"]
-
-editor/display_folded = true
-position = Vector2( 0.775391, 3.11932 )
-rotation_degrees = -27.3294
-scale = Vector2( 0.557599, 7.60815 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="faixa1" type="CollisionShape2D" parent="BackAnim/faixa11/faixa1"]
-
-position = Vector2( 1.65381, -0.611221 )
-rotation_degrees = 5.18912
-scale = Vector2( 3.10041, 3.22987 )
-trigger = false
-_update_shape_index = 0
-
-[node name="faixa1 2" type="Label" parent="BackAnim/faixa11/faixa1"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
-margin_left = -28.9995
-margin_top = -33.0
-margin_right = 34.0005
-margin_bottom = 32.0
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-mouse_filter = 1
-
 [node name="faixa1" type="Sprite" parent="BackAnim"]
 
 position = Vector2( 3175.77, 557.003 )
@@ -391,7 +278,6 @@ texture = ExtResource( 5 )
 
 position = Vector2( 3438.35, 294.68 )
 rotation_degrees = 17.9717
-scale = Vector2( 1, 1 )
 z_index = 1
 z_as_relative = false
 texture = ExtResource( 5 )
@@ -946,9 +832,9 @@ playing = true
 
 [connection signal="pressed" from="comandos/jogar" to="." method="_on_jogar_pressed" binds=[  ]]
 
-[connection signal="pressed" from="comandos/jogar" to="boi" method="_on_jogar_pressed" binds=[  ]]
-
 [connection signal="pressed" from="comandos/jogar" to="batisteiro" method="_on_jogar_pressed" binds=[  ]]
+
+[connection signal="pressed" from="comandos/jogar" to="boi" method="_on_jogar_pressed" binds=[  ]]
 
 [connection signal="pressed" from="comandos/jogar" to="Vaqueiro" method="_on_jogar_pressed" binds=[  ]]
 

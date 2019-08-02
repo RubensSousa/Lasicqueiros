@@ -42,7 +42,3 @@ func _on_Area2D_body_enter( body ):
 	get_node("Vaqueiro/Sprite_animado").set_animation("Paradofrente")
 	get_node("AnimIntro").play("Introducao")
 
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.pressed:
-	    	_on_Pular_pressed()

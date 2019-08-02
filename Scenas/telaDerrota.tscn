@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/telaDerrora.gd" type="Script" id=1]
 [ext_resource path="res://Sprits/botoes/tela1.png" type="Texture" id=2]
@@ -11,14 +11,15 @@
 [ext_resource path="res://Sprits/botoes/reiniciar.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
+
 resource_name = "Hide"
 length = 0.5
+loop = false
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Reiniciar:position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -28,9 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/path = NodePath("Reiniciar:rotation_degrees")
 tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -40,9 +39,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/path = NodePath("Menu/Sprite:position")
 tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -52,9 +49,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/path = NodePath("Menu/Sprite:rotation_degrees")
 tracks/3/interp = 1
-tracks/3/loop_wrap = true
 tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -64,9 +59,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/path = NodePath("Sprite 2:position")
 tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -76,9 +69,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite 2:rotation_degrees")
 tracks/5/interp = 1
-tracks/5/loop_wrap = true
 tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -88,9 +79,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/path = NodePath("Sprite:position")
 tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -100,9 +89,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/path = NodePath("Sprite:rotation_degrees")
 tracks/7/interp = 1
-tracks/7/loop_wrap = true
 tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -112,9 +99,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/path = NodePath("Menu:position")
 tracks/8/interp = 1
-tracks/8/loop_wrap = true
 tracks/8/imported = false
-tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -124,9 +109,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/path = NodePath("Menu:rotation_degrees")
 tracks/9/interp = 1
-tracks/9/loop_wrap = true
 tracks/9/imported = false
-tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -136,9 +119,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/path = NodePath("Reiniciar/Sprite:position")
 tracks/10/interp = 1
-tracks/10/loop_wrap = true
 tracks/10/imported = false
-tracks/10/enabled = true
 tracks/10/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -148,9 +129,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/path = NodePath("Reiniciar/Sprite:rotation_degrees")
 tracks/11/interp = 1
-tracks/11/loop_wrap = true
 tracks/11/imported = false
-tracks/11/enabled = true
 tracks/11/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -159,14 +138,15 @@ tracks/11/keys = {
 }
 
 [sub_resource type="Animation" id=2]
+
 resource_name = "show"
 length = 0.5
+loop = false
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Reiniciar:position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -176,9 +156,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/path = NodePath("Reiniciar:rotation_degrees")
 tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -188,9 +166,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/path = NodePath("Menu/Sprite:position")
 tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -200,9 +176,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/path = NodePath("Menu/Sprite:rotation_degrees")
 tracks/3/interp = 1
-tracks/3/loop_wrap = true
 tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -212,9 +186,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/path = NodePath("Sprite 2:position")
 tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -224,9 +196,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite 2:rotation_degrees")
 tracks/5/interp = 1
-tracks/5/loop_wrap = true
 tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -236,9 +206,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/path = NodePath("Sprite:position")
 tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -248,9 +216,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/path = NodePath("Sprite:rotation_degrees")
 tracks/7/interp = 1
-tracks/7/loop_wrap = true
 tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -260,9 +226,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/path = NodePath("Menu:position")
 tracks/8/interp = 1
-tracks/8/loop_wrap = true
 tracks/8/imported = false
-tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -272,9 +236,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/path = NodePath("Menu:rotation_degrees")
 tracks/9/interp = 1
-tracks/9/loop_wrap = true
 tracks/9/imported = false
-tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -284,9 +246,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/path = NodePath("Reiniciar/Sprite:position")
 tracks/10/interp = 1
-tracks/10/loop_wrap = true
 tracks/10/imported = false
-tracks/10/enabled = true
 tracks/10/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -296,9 +256,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/path = NodePath("Reiniciar/Sprite:rotation_degrees")
 tracks/11/interp = 1
-tracks/11/loop_wrap = true
 tracks/11/imported = false
-tracks/11/enabled = true
 tracks/11/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -307,76 +265,92 @@ tracks/11/keys = {
 }
 
 [node name="telaDerrota" type="Node2D"]
+
 pause_mode = 2
 z_index = 20
 script = ExtResource( 1 )
 
 [node name="ColorFrame" type="ColorRect" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = -16.0
 margin_top = -18.0
 margin_right = 1298.0
 margin_bottom = 735.0
 color = Color( 0, 0, 0, 0.470588 )
+mouse_filter = 0
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.470588 )
+
 position = Vector2( 366.544, 247.64 )
 scale = Vector2( 0.8, 0.6 )
 texture = ExtResource( 2 )
 centered = false
+modulate = Color( 1, 1, 1, 0.470588 )
 
 [node name="Sprite 2" type="Sprite" parent="."]
+
 position = Vector2( 458.641, 283.904 )
 scale = Vector2( 0.7, 1 )
 texture = ExtResource( 3 )
 centered = false
 
 [node name="Menu" type="TouchScreenButton" parent="."]
+
 position = Vector2( 329.877, 208.64 )
 scale = Vector2( 1.5, 1.5 )
 normal = ExtResource( 4 )
 pressed = ExtResource( 5 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
 
 [node name="Sprite" type="Sprite" parent="Menu"]
+
 position = Vector2( 37.8119, 37.4613 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 6 )
 
-<<<<<<< HEAD
-=======
-[node name="TextureButton" type="TextureButton" parent="Menu"]
-margin_right = 77.0
-margin_bottom = 79.0
-
->>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
 [node name="Reiniciar" type="TouchScreenButton" parent="."]
+
 position = Vector2( 572.745, 410.678 )
 scale = Vector2( 1.5, 1.5 )
 normal = ExtResource( 7 )
 pressed = ExtResource( 8 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
 
 [node name="Sprite" type="Sprite" parent="Reiniciar"]
+
 pause_mode = 2
 position = Vector2( 42.8031, 21.1212 )
 scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 9 )
 
-<<<<<<< HEAD
-=======
-[node name="TextureButton" type="TextureButton" parent="Reiniciar"]
-margin_right = 85.0
-margin_bottom = 40.0
-
->>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
 [node name="Anim" type="AnimationPlayer" parent="."]
-autoplay = "show"
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
 anims/Hide = SubResource( 1 )
 anims/show = SubResource( 2 )
-[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
-<<<<<<< HEAD
-[connection signal="pressed" from="Reiniciar" to="." method="_on_Reiniciar_pressed"]
-=======
-[connection signal="pressed" from="Menu/TextureButton" to="." method="_on_Menu_pressed"]
-[connection signal="pressed" from="Reiniciar" to="." method="_on_Reiniciar_pressed"]
-[connection signal="pressed" from="Reiniciar/TextureButton" to="." method="_on_Reiniciar_pressed"]
->>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
+playback_active = true
+playback_speed = 1.0
+blend_times = [  ]
+autoplay = "show"
+
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed" binds=[  ]]
+
+[connection signal="pressed" from="Reiniciar" to="." method="_on_Reiniciar_pressed" binds=[  ]]

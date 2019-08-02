@@ -11,14 +11,15 @@
 [ext_resource path="res://Sprits/botoes/nao.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
+
 resource_name = "PerguntaAnim"
 length = 0.5
+loop = false
+step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BtnNao:rect_position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -28,9 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/path = NodePath("BtnSim:rect_position")
 tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -40,9 +39,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/path = NodePath("FrasePergunta:position")
 tracks/2/interp = 1
-tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -52,9 +49,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/path = NodePath("FrasePergunta:rotation_degrees")
 tracks/3/interp = 1
-tracks/3/loop_wrap = true
 tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -64,9 +59,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/path = NodePath("FraseAtencao:position")
 tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -76,9 +69,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/path = NodePath("FraseAtencao:rotation_degrees")
 tracks/5/interp = 1
-tracks/5/loop_wrap = true
 tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -88,9 +79,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/path = NodePath("BtnSim/Sprite:position")
 tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -100,9 +89,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/path = NodePath("BtnSim/Sprite:rotation_degrees")
 tracks/7/interp = 1
-tracks/7/loop_wrap = true
 tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -112,9 +99,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/path = NodePath("BtnNao/Sprite:position")
 tracks/8/interp = 1
-tracks/8/loop_wrap = true
 tracks/8/imported = false
-tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -124,9 +109,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/path = NodePath("BtnNao/Sprite:rotation_degrees")
 tracks/9/interp = 1
-tracks/9/loop_wrap = true
 tracks/9/imported = false
-tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -136,9 +119,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/path = NodePath("Painel:position")
 tracks/10/interp = 1
-tracks/10/loop_wrap = true
 tracks/10/imported = false
-tracks/10/enabled = true
 tracks/10/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -148,9 +129,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/path = NodePath("Painel:rotation_degrees")
 tracks/11/interp = 1
-tracks/11/loop_wrap = true
 tracks/11/imported = false
-tracks/11/enabled = true
 tracks/11/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -159,9 +138,17 @@ tracks/11/keys = {
 }
 
 [node name="TelaNome" type="Node2D"]
+
 script = ExtResource( 1 )
 
 [node name="Fundo" type="TextureRect" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 0.0
+margin_top = 0.0
 margin_right = 1280.0
 margin_bottom = 720.0
 texture = ExtResource( 2 )
@@ -169,50 +156,90 @@ stretch_mode = 7
 __meta__ = {
 "_edit_lock_": true
 }
+mouse_filter = 1
 
 [node name="Painel" type="Sprite" parent="."]
-position = Vector2( 33.7599, -412.191 )
+
+position = Vector2( 70.1963, -412.191 )
 texture = ExtResource( 3 )
 centered = false
 offset = Vector2( 230.227, 535.101 )
 
 [node name="FrasePergunta" type="Sprite" parent="."]
+
 position = Vector2( 360.5, 223.5 )
 texture = ExtResource( 4 )
 centered = false
 
 [node name="FraseAtencao" type="Sprite" parent="."]
+
 position = Vector2( 360, 289.262 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="BtnSim" type="TextureButton" parent="."]
-margin_left = 388.893
-margin_top = 398.413
-margin_right = 516.893
-margin_bottom = 463.413
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 400.0
+margin_top = 400.0
+margin_right = 528.0
+margin_bottom = 465.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
+params/resize_mode = 0
+texture_scale = Vector2( 1.5, 1.5 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="Sprite" type="Sprite" parent="BtnSim"]
-position = Vector2( 39.1277, 20.0649 )
+
+position = Vector2( 63.0882, 33.0792 )
 scale = Vector2( 0.5, 0.4 )
 texture = ExtResource( 8 )
 
 [node name="BtnNao" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags_horizontal = 1
+size_flags_vertical = 1
 margin_left = 750.0
 margin_top = 400.0
 margin_right = 878.0
 margin_bottom = 465.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
+params/resize_mode = 0
+texture_scale = Vector2( 1.5, 1.5 )
+params/stretch_mode = 0
+mouse_filter = 0
 
 [node name="Sprite" type="Sprite" parent="BtnNao"]
-position = Vector2( 42.7806, 17.2379 )
+
+position = Vector2( 64.994, 31.5179 )
 scale = Vector2( 0.5, 0.4 )
 texture = ExtResource( 9 )
 
 [node name="AnimPergunta" type="AnimationPlayer" parent="."]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
 anims/PerguntaAnim = SubResource( 1 )
-[connection signal="tree_entered" from="BtnSim" to="BtnSim" method="_on_BtnSim_tree_entered"]
-[connection signal="pressed" from="BtnNao" to="." method="_on_BtnNao_pressed"]
+playback_active = true
+playback_speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[connection signal="pressed" from="BtnSim" to="." method="_on_BtnSim_pressed" binds=[  ]]
+
+[connection signal="pressed" from="BtnNao" to="." method="_on_BtnNao_pressed" binds=[  ]]
