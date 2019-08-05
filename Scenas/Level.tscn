@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprits/nivel.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=2]
@@ -7,28 +7,36 @@
 [ext_resource path="res://Sprits/botoes/lock.png" type="Texture" id=5]
 
 [node name="Level" type="TouchScreenButton"]
+
 normal = ExtResource( 1 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
 script = ExtResource( 2 )
+level = 0
+estrelas1 = null
+estrelas2 = null
+estrelas3 = null
 
 [node name="estrelas" type="Sprite" parent="."]
+
 visible = false
 position = Vector2( 93.8835, 200.229 )
 texture = ExtResource( 3 )
 
 [node name="numero" type="Sprite" parent="."]
+
 position = Vector2( 95.9821, -15.9171 )
 texture = ExtResource( 4 )
 
 [node name="bloqueado" type="Sprite" parent="."]
+
 position = Vector2( 162.737, 165.348 )
 texture = ExtResource( 5 )
-<<<<<<< HEAD
-[connection signal="pressed" from="." to="." method="_on_Level_pressed"]
-=======
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_right = 215.0
-margin_bottom = 211.0
-[connection signal="pressed" from="." to="." method="_on_Level_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_Level_pressed"]
->>>>>>> 9a1fcdfe5f1a8e1b4286da6267967861c8667c3e
+[connection signal="pressed" from="." to="." method="_on_Level_pressed" binds=[  ]]

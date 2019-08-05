@@ -9,6 +9,7 @@ func _on_BtnNao_pressed():
 	
 func _on_BtnSim_pressed():
 	get_node("AnimPergunta").play("PerguntaAnim")
-	#yield(get_node("AnimPergunta"), "finished")
+#	yield(get_node("AnimPergunta"), "finished")
 	
 	trocadetelas.put_above("res://Scenas/TelaNome_2.tscn")
+

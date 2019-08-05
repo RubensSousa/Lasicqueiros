@@ -24,7 +24,3 @@ func _process(delta):
 func _on_Retorna_pressed():
 	trocadetelas.clear_above()
 
-
-
-func _on_Level_pressed():
-	pass # Replace with function body.

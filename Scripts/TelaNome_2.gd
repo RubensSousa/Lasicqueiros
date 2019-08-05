@@ -1,7 +1,5 @@
 extends Node2D
 
-var nome
-
 func _ready():
 	set_process(true)
 

@@ -189,17 +189,17 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Pular" type="TextureButton" parent="Control"]
-margin_left = 995.152
-margin_top = 567.051
-margin_right = 1208.15
-margin_bottom = 674.051
+margin_left = 1072.0
+margin_top = 600.0
+margin_right = 1242.0
+margin_bottom = 686.0
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Sprite" type="Sprite" parent="Control/Pular"]
-position = Vector2( 107.12, 51.0504 )
-scale = Vector2( 0.628695, 0.622056 )
+position = Vector2( 86.64, 41.8735 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_enter"]

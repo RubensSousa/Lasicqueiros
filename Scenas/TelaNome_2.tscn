@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/TelaNome_2.gd" type="Script" id=1]
 [ext_resource path="res://Sprits/1257cb9f52a4d10.jpg" type="Texture" id=2]
@@ -11,15 +11,13 @@
 [ext_resource path="res://fontes/font20.font" type="BitmapFont" id=9]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "NomeAnim"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("FrasePergunta:position")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -29,7 +27,9 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/path = NodePath("FrasePergunta:rotation_degrees")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -39,7 +39,9 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/path = NodePath("FraseAtencao:position")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -49,7 +51,9 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/path = NodePath("FraseAtencao:rotation_degrees")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -59,7 +63,9 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/path = NodePath("Painel:position")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -69,7 +75,9 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/path = NodePath("Painel:rotation_degrees")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -79,7 +87,9 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/path = NodePath("BtnSeguir/Sprite:position")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -89,7 +99,9 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/path = NodePath("BtnSeguir/Sprite:rotation_degrees")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -99,7 +111,9 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/path = NodePath("Nome/VScrollBar:rect_position")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -109,7 +123,9 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/path = NodePath("BtnSeguir:rect_position")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -119,7 +135,9 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/path = NodePath("Nome:rect_position")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -128,15 +146,14 @@ tracks/10/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "NomeAnim_2"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BtnSeguir:rect_position")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -146,7 +163,9 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/path = NodePath("Nome/VScrollBar:rect_position")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -156,7 +175,9 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/path = NodePath("Nome:rect_position")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -166,7 +187,9 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/path = NodePath("BtnSeguir/Sprite:position")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -176,7 +199,9 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/path = NodePath("BtnSeguir/Sprite:rotation_degrees")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -186,7 +211,9 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/path = NodePath("FrasePergunta:position")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -196,7 +223,9 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/path = NodePath("FrasePergunta:rotation_degrees")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -206,7 +235,9 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/path = NodePath("Painel:position")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -216,7 +247,9 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/path = NodePath("Painel:rotation_degrees")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -226,7 +259,9 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/path = NodePath("FraseAtencao:position")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -236,7 +271,9 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/path = NodePath("FraseAtencao:rotation_degrees")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -245,18 +282,10 @@ tracks/10/keys = {
 }
 
 [node name="TelaNome_2" type="Node2D"]
-
 pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="Fundo" type="TextureRect" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 1
-margin_left = 0.0
-margin_top = 0.0
 margin_right = 1280.0
 margin_bottom = 720.0
 texture = ExtResource( 2 )
@@ -264,86 +293,53 @@ stretch_mode = 7
 __meta__ = {
 "_edit_lock_": true
 }
-mouse_filter = 1
 
 [node name="Painel" type="Sprite" parent="."]
-
 position = Vector2( 136.557, -491.49 )
 scale = Vector2( 1.5, 1 )
 texture = ExtResource( 3 )
 centered = false
 
 [node name="FrasePergunta" type="Sprite" parent="."]
-
 position = Vector2( 210, -420.277 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 4 )
 centered = false
 
 [node name="FraseAtencao" type="Sprite" parent="."]
-
 position = Vector2( 210, -303.648 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="BtnSeguir" type="TextureButton" parent="."]
-
 pause_mode = 2
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 1
-margin_left = 941.0
+margin_left = 923.0
 margin_top = -204.0
 margin_right = 1069.0
-margin_bottom = -139.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_bottom = -132.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
-params/resize_mode = 0
-texture_scale = Vector2( 1.5, 1.5 )
-params/stretch_mode = 0
-mouse_filter = 0
+expand = true
 
 [node name="Sprite" type="Sprite" parent="BtnSeguir"]
-
-position = Vector2( 63.0882, 33.0792 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 78.7211, 35.5665 )
+scale = Vector2( 0.739884, 0.656781 )
 texture = ExtResource( 8 )
 
 [node name="AnimNome" type="AnimationPlayer" parent="."]
-
 pause_mode = 2
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-root_node = NodePath("..")
+autoplay = "NomeAnim"
 anims/NomeAnim = SubResource( 1 )
 anims/NomeAnim_2 = SubResource( 2 )
-playback_active = true
-playback_speed = 1.0
-blend_times = [  ]
-autoplay = "NomeAnim"
 
 [node name="Nome" type="LineEdit" parent="."]
-
 pause_mode = 2
-rect_scale = Vector2( 1, 2 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 1
-margin_left = 351.0
+margin_left = 352.0
 margin_top = -330.0
-margin_right = 1059.0
-margin_bottom = -298.0
+margin_right = 1079.0
+margin_bottom = 480.0
+rect_scale = Vector2( 1, 0.1 )
+size_flags_stretch_ratio = 0.0
 custom_fonts/font = ExtResource( 9 )
-placeholder_alpha = 0.6
-focus_mode = 2
-caret_blink = false
-caret_blink_speed = 0.65
-mouse_filter = 0
-
-[connection signal="pressed" from="BtnSeguir" to="." method="_on_BtnSeguir_pressed" binds=[  ]]
+[connection signal="pressed" from="BtnSeguir" to="." method="_on_BtnSeguir_pressed"]

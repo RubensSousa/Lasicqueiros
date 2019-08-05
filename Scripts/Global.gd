@@ -9,21 +9,10 @@ var levelJogo = 1
 var velocidade = 100
 var nome = str("")
 var estrelas = 0
-var rodadas = 0
+var rodadas = 1
 var trofeu = str("")
 var classificacao = str("")
-
-#func get_velocidade():
-#	print("AtualLevel=",AtualLevel)
-#	if AtualLevel == 1:
-#		velocidade = rand_range(1000,2000)
-#		print("velocidade=",velocidade)
-	#elif Global.AtualLevel == 2:
-	#	Global.velocidade = randi_range(1000,1200)
-	#elif Global.AtualLevel == 3:
-	#	Global.velocidade = randi_range(1300,1500)
-	#print("Global.velocidade",velocidade)
-
+var pontuacao = 30
 var savefile = File.new()
 var savepath = "user://savegame.save"
 var savedata = {"level1": 0,
@@ -33,6 +22,7 @@ var savedata = {"level1": 0,
 func _ready():
 #	print("Global", bloqMovi)
 #	print(VaqueiroSelect)
+
 	if not savefile.file_exists(savepath):
 		save()
 	read()
